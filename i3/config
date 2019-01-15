@@ -229,7 +229,7 @@ exec compton -b &
 # programs shortcuts
 bindsym Mod1+g exec opera
 
-# thunar shortcut
+# ranger shortcut
 bindsym Mod1+Shift+t exec termite -e ranger
 
 # screenshot
