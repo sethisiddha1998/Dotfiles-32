@@ -109,4 +109,5 @@ cat ~/.cache/wal/sequences
 source ~/.cache/wal/colors-tty.sh
 
 neofetch
+
 alias config='/usr/bin/git --git-dir=/home/makers/.cfg/ --work-tree=/home/makers'
