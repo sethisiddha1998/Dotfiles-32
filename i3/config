@@ -42,6 +42,12 @@ bindsym $mod+q kill
 # installed.
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
+# Make the currently focused window a scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Show the first scratchpad window
+bindsym $mod+minus scratchpad show
+
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
@@ -191,8 +197,8 @@ smart_gaps on
 for_window [class="^.*"] border pixel 0
 
 #Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +4% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -4% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
 
@@ -224,7 +230,7 @@ exec compton -b &
 bindsym Mod1+g exec opera
 
 # thunar shortcut
-bindsym Mod1+shift+t exec thunar
+bindsym Mod1+Shift+t exec termite -e ranger
 
 # screenshot
 bindsym --release Print exec scrot '%Y-%m-%d_%H.%M.%S_$wx$h.png' -e 'mv $f ~/Pictures/screenshots' -q 100
@@ -234,7 +240,7 @@ bindsym --release Shift+Print exec scrot '%Y-%m-%d_%H.%M.%S_$wx$h.png' -e 'mv $f
 exec_always wal -R &
 
 #feh
-exec feh --bg-scale ~/Pictures/bird.png
+exec feh --bg-scale ~/Pictures/space.jpg
 
 
 #######################################################################
