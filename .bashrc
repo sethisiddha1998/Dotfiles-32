@@ -8,18 +8,9 @@
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
-# pywal
-setsid wal -i ~/Pictures/bird.png
-
-setsid wal -c
+setsid wal -R
 
 neofetch
 
-
-
-
-
-
-
-
-
+# pywal
+setsid wal -i ~/Pictures/space.jpg
