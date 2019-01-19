@@ -217,6 +217,9 @@ exec --no-startup-id dunst
 # compton
 exec compton -b &
 
+# start Rofi
+#bindsym $mod+d exec rofi -show run
+
 # start dmenu (a program launcher)
 #bindsym Mod1+d exec dmenu_run -nb black -sb tomato -l 100 -fn 50
 
@@ -234,7 +237,7 @@ bindsym --release Shift+Print exec scrot '%Y-%m-%d_%H.%M.%S_$wx$h.png' -e 'mv $f
 exec_always wal -R &
 
 #feh
-exec feh --bg-scale ~/Pictures/space.jpg
+exec feh --bg-scale ~/Pictures/plane.png
 
 
 #######################################################################
