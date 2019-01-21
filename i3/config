@@ -229,6 +229,9 @@ bindsym Mod1+g exec opera
 # ranger shortcut
 bindsym Mod1+Shift+t exec termite -e ranger
 
+# calcurse
+bindsym $mod+y exec termite -e calcurse
+
 # screenshot
 bindsym --release Print exec scrot '%Y-%m-%d_%H.%M.%S_$wx$h.png' -e 'mv $f ~/Pictures/screenshots' -q 100
 bindsym --release Shift+Print exec scrot '%Y-%m-%d_%H.%M.%S_$wx$h.png' -e 'mv $f ~/Pictures/screenshots'
