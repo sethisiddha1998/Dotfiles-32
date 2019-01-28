@@ -172,7 +172,7 @@ bar {
         separator #666666
         background #000000
         statusline #dddddd
-        focused_workspace #006740 #006740 #ffffff
+        focused_workspace #E74B12 #E74B12 #ffffff
         active_workspace #333333 #333333 #ffffff
         inactive_workspace #333333 #333333 #888888
         urgent_workspace #2f343a #900000 #ffffff
@@ -223,11 +223,11 @@ exec compton -b &
 # start dmenu (a program launcher)
 #bindsym Mod1+d exec dmenu_run -nb black -sb tomato -l 100 -fn 50
 
-# programs shortcuts
-bindsym Mod1+g exec opera
+# browser shortcut
+bindsym Mod1+g exec firefox
 
 # ranger shortcut
-bindsym Mod1+Shift+t exec termite -e ranger
+bindsym Mod1+Shift+t exec termite -e ranger  
 
 # calcurse
 bindsym $mod+y exec termite -e calcurse
@@ -240,7 +240,7 @@ bindsym --release Shift+Print exec scrot '%Y-%m-%d_%H.%M.%S_$wx$h.png' -e 'mv $f
 exec_always wal -R &
 
 #feh
-exec feh --bg-scale ~/Pictures/plane.png
+exec feh --bg-scale ~/Pictures/binary-wallpapers.jpg
 
 
 #######################################################################
