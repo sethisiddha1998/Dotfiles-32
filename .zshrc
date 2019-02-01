@@ -14,7 +14,7 @@ ZSH_THEME="fino" # (...please let it be pie... please be some pie..)
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
 # If set to an empty array, this variable will have no effect.
-#ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "rkj-repos" )
+#ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "rkj-repos" "fino" "powerline" )
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -108,6 +108,5 @@ cat ~/.cache/wal/sequences
 # To add support for TTYs this line can be optionally added.
 source ~/.cache/wal/colors-tty.sh
 
-neofetch
 
 alias config='/usr/bin/git --git-dir=/home/makers/.cfg/ --work-tree=/home/makers'
