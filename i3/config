@@ -4,7 +4,7 @@ set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8
+font pango:Fantasque Sans Mono 8
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -90,6 +90,7 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # Define names for default workspaces for which we configure key bindings later on.
+
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1"
 set $ws2 "2"
@@ -126,14 +127,7 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
-# reload the configuration file
-bindsym $mod+Shift+c reload
 
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
-
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec i3-msg exit
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -165,7 +159,7 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status finds out, if available)
 
 bar {
-    font pango:DejaVu Sans Mono, FontAwesome 12
+    font pango:Fantasque Sans Mono, FontAwesome 14
     position top
     status_command /usr/bin/i3status-rs ~/.config/status.toml
     colors {
@@ -188,6 +182,15 @@ smart_gaps on
 # https://github.com/Airblader/i3/issues/29
 # the following line fixes the issue, removes window titlebars
 for_window [class="^.*"] border pixel 0
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec i3-msg exit
 
 #Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +4% #increase sound volume
@@ -221,16 +224,16 @@ exec compton -b &
 #bindsym $mod+d exec rofi -show run
 
 # start dmenu (a program launcher)
-#bindsym Mod1+d exec dmenu_run -nb black -sb tomato -l 100 -fn 50
+#bindsym Mod1+d exec dmenu_run 
 
 # browser shortcut
-bindsym Mod1+g exec firefox
+bindsym Mod1+g exec opera
 
 # ranger shortcut
 bindsym Mod1+Shift+t exec termite -e ranger  
 
 # calcurse
-bindsym $mod+y exec termite -e calcurse
+bindsym Mod1+y exec termite -e calcurse
 
 # screenshot
 bindsym --release Print exec scrot '%Y-%m-%d_%H.%M.%S_$wx$h.png' -e 'mv $f ~/Pictures/screenshots' -q 100
