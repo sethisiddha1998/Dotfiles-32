@@ -220,16 +220,16 @@ exec --no-startup-id dunst
 exec --no-startup-id compton -b &
 
 # start Rofi
-bindsym $mod+d exec --no-startup-id rofi -show run drun
+bindsym $mod+d exec --no-startup-id rofi -show drun
 
  # browser shortcut
 bindsym Mod1+g exec opera
 
 # ranger shortcut
-bindsym Mod1+Shift+t exec termite -e ranger  
+bindsym Mod1+Shift+t exec termite -e "zsh -c 'source ~/.zshrc & ranger'"  
 
 # calcurse
-bindsym Mod1+y exec termite -e calcurse
+bindsym Mod1+y exec termite -e "zsh -c 'source ~/.zshrc & calcurse'"
 
 # screenshot
 bindsym --release Print exec scrot '%Y-%m-%d_%H.%M.%S_$wx$h.png' -e 'mv $f ~/Pictures/screenshots' -q 100
