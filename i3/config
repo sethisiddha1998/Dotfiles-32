@@ -214,10 +214,10 @@ exec --no-startup-id autocutsel
 exec_always --no-startup-id numlockx on
 
 # dunst
-exec --no-startup-id dunst
+exec dunst
 
 # compton
-exec --no-startup-id compton -b &
+exec compton -b &
 
 # start Rofi
 bindsym $mod+d exec --no-startup-id rofi -show drun
@@ -239,7 +239,7 @@ bindsym --release Shift+Print exec scrot '%Y-%m-%d_%H.%M.%S_$wx$h.png' -e 'mv $f
 exec_always wal -R &
 
 #feh
-exec --no-startup-id feh --bg-scale ~/Pictures/binary-wallpapers.jpg
+exec feh --bg-scale ~/Pictures/binary-wallpapers.jpg
 
 
 #######################################################################
