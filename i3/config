@@ -208,7 +208,7 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym Mod1+shift+o exec i3lock --color E74B12
 
 # copy and paste buffer
-exec autocutsel
+exec --no-startup-id autocutsel
 
 #numlockx
 exec_always --no-startup-id numlockx on
@@ -217,7 +217,7 @@ exec_always --no-startup-id numlockx on
 exec --no-startup-id dunst
 
 # compton
-exec compton -b &
+exec --no-startup-id compton -b &
 
 # start Rofi
 bindsym $mod+d exec --no-startup-id rofi -show drun
@@ -225,8 +225,8 @@ bindsym $mod+d exec --no-startup-id rofi -show drun
  # browser shortcut
 bindsym Mod1+g exec opera
 
-# ranger shortcut
-bindsym Mod1+Shift+t exec termite -e "zsh -c 'source ~/.zshrc & ranger'"  
+# Thunar shortcut
+bindsym Mod1+Shift+t exec thunar  
 
 # calcurse
 bindsym Mod1+y exec termite -e "zsh -c 'source ~/.zshrc & calcurse'"
@@ -239,7 +239,7 @@ bindsym --release Shift+Print exec scrot '%Y-%m-%d_%H.%M.%S_$wx$h.png' -e 'mv $f
 exec_always wal -R &
 
 #feh
-exec feh --bg-scale ~/Pictures/binary-wallpapers.jpg
+exec --no-startup-id feh --bg-scale ~/Pictures/bubble.jpg
 
 
 #######################################################################
@@ -252,3 +252,4 @@ exec feh --bg-scale ~/Pictures/binary-wallpapers.jpg
 # Please remove the following exec line:
 #######################################################################
 exec i3-config-wizard
+
