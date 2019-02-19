@@ -1,10 +1,5 @@
 theme = "slick"
-icons = "awesome"
-
-
-[[block]]
-block = "pacman"
-interval = 14400
+icons = "none"
 
 [[block]]
 block = "temperature"
@@ -35,7 +30,7 @@ device = "enp3s0"
 ssid = true
 ip = false
 speed_up = false
-graph_up = true
+graph_down = true
 interval = 5
 
 [[block]]
