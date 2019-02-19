@@ -1,4 +1,4 @@
-# Font for window titles. Will also be used by the bar unless a different font
+ Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 font pango:Fantasque Sans Mono 8
 
@@ -17,7 +17,7 @@ font pango:DejaVu Sans Mono 8
 set $mod Mod1
 
 # start a terminal
-bindsym $mod+Return exec termite
+bindsym $mod+Return exec urxvt
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -153,7 +153,7 @@ bindsym $mod+r mode "resize"
 bar {
     font pango:Fantasque Sans Mono, FontAwesome 14
     position top
-    status_command /usr/bin/i3status-rs ~/.config/status.toml
+    status_command /bin/i3status-rs ~/.config/status.toml
     colors {
         separator #666666
         background #000000
@@ -228,9 +228,6 @@ bindsym Mod1+g exec opera
 # Thunar shortcut
 bindsym Mod1+Shift+t exec thunar  
 
-# calcurse
-bindsym Mod1+y exec termite -e "zsh -c 'source ~/.zshrc & calcurse'"
-
 # screenshot
 bindsym --release Print exec scrot '%Y-%m-%d_%H.%M.%S_$wx$h.png' -e 'mv $f ~/Pictures/screenshots' -q 100
 bindsym --release Shift+Print exec scrot '%Y-%m-%d_%H.%M.%S_$wx$h.png' -e 'mv $f ~/Pictures/screenshots'
@@ -240,6 +237,8 @@ exec_always wal -R &
 
 #feh
 exec --no-startup-id feh --bg-scale ~/Pictures/bubble.jpg
+
+
 
 
 #######################################################################
@@ -252,4 +251,3 @@ exec --no-startup-id feh --bg-scale ~/Pictures/bubble.jpg
 # Please remove the following exec line:
 #######################################################################
 exec i3-config-wizard
-
